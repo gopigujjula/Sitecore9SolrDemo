@@ -1,0 +1,26 @@
+﻿@using SolrNet;
+@using Sitecore.ContentSearch.SearchTypes
+
+@model SolrQueryResults<SearchResultItem>
+
+@if (Model != null)
+{
+    foreach (var group in Model.Grouping)
+    {
+        foreach (var grp in group.Value.Groups)
+        {
+            <div class="group">
+                <div class="group-header">
+                    @grp.GroupValue
+                </div>
+                <div class="group-item">
+                    @foreach (var item in grp.Documents)
+                    {
+                        <span>@item["Name"] - @item["Language"]</span>
+                    }
+                    
+                </div>
+            </div>
+        }
+    }
+}

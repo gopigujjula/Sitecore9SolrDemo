@@ -1,0 +1,18 @@
+﻿@model SC9SolrDemo.Models.SpellCheckResult
+
+@if (Model != null)
+{
+    <h1>
+        Search Text:   @Model.SearchText
+    </h1>
+    <ul>        
+        @foreach (var suggestion in Model.Suggestions)
+        {
+            <li>
+                <h1>
+                    Did You Mean: <em style="color:red">@suggestion</em>
+                </h1>
+            </li>
+        }
+    </ul>
+}

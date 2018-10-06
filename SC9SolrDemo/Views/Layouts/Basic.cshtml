@@ -1,0 +1,41 @@
+﻿@using Sitecore.Mvc
+
+<!doctype html>
+<html>
+<head>
+    <title>Sitecore 9 | Solr Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .group {
+            font-family: sans-serif;
+            border: #aecce6 solid 1px;
+            margin: 10px;
+        }
+
+        .group-header {
+            font-size: larger;
+            font-weight: bold;
+            background-color: aliceblue;
+            padding: 10px;
+        }
+
+        .group-item {
+            padding: 10px;
+            display: grid;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            @Html.Sitecore().Placeholder("top")
+        </div>
+        <div>
+            @Html.Sitecore().Placeholder("main")
+        </div>
+        <div>
+            @Html.Sitecore().Placeholder("bottom")
+        </div>
+    </div>
+</body>
+</html>

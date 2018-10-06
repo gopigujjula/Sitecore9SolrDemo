@@ -1,0 +1,20 @@
+@model IEnumerable<SC9SolrDemo.Models.HighlightResult>
+
+@if (Model != null)
+{
+    <ul>
+        @foreach (var highlight in Model)
+        {
+            <li>
+                <h1>
+                    @highlight.Name
+                </h1>
+            </li>
+                <li>
+                    <h3>
+                        @Html.Raw(highlight.Value)
+                    </h3>
+                </li>
+        }
+    </ul>
+}
